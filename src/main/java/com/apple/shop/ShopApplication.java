@@ -9,16 +9,18 @@ public class ShopApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ShopApplication.class, args);
 
-		var test = new Friend("lee");
+		var test = new Friend("lee", 20);
 		System.out.println(test.name);
+		System.out.println(test.age);
 	}
 
 }
 
 class Friend {
-	String name = "kim";
-	int age = 20;
-	Friend(String a){
+	String name;
+	int age;
+	Friend(String a, int b){
 		this.name = a;
+		this.age = b;
 	}
 }
