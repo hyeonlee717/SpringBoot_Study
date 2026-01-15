@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+
+    <div class="card" th:each="a : ${items}">
+        <img src="https://placehold.co/300">
+        <div>
+            <h4 th:text="${a.title}"></h4>
+            <p th:text="${a.price}+'원'"></p>
+        </div>
+    </div>
+
+</body>
+</html>
