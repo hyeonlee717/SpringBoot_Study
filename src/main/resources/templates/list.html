@@ -13,13 +13,17 @@
 <body>
     <div th:replace="~{nav.html::navbar}"></div>
     <div class="card" th:each="a : ${items}">
-        <img src="https://placehold.co/300">
+        <a th:href="'detail/' + ${a.id}">
+            <img src="https://placehold.co/300">
+        </a>
         <div>
-            <h4 th:text="${a.title}"></h4>
-            <a th:href="'detail/' + ${a.id}">링크</a>
-            <p th:text="${a.price}+'원'"></p>
+            <a th:href="'detail/' + ${a.id}">
+                <h4 th:text="${a.title}"></h4>
+                <p th:text="${a.price}+'원'"></p>
+            </a>
+            <a th:href="'edit/' + ${a.id}">수정</a>
+            <a th:href="'delete/' + ${a.id}" onclick="return confirm('정말 삭제할까요?')">삭제</a>
         </div>
     </div>
-
 </body>
 </html>

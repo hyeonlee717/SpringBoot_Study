@@ -1,4 +1,4 @@
-package com.apple.shop;
+package com.apple.shop.test;
 
 import lombok.Getter;
 import lombok.Setter;

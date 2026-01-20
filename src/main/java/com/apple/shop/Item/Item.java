@@ -1,4 +1,4 @@
-package com.apple.shop;
+package com.apple.shop.Item;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -18,13 +18,17 @@ public class Item {
     @Column
     private Integer price;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setTitle(String title) {
 
         this.title = title;
     }
 
     public void setPrice(Integer price) {
-        
+
         this.price = price;
     }
 }

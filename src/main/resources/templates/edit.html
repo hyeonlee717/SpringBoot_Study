@@ -10,11 +10,11 @@
 </head>
 <body>
     <div th:replace="~{nav.html::navbar}"></div>
-    <h4>error page</h4>
-    <p th:text="${status}"></p>
-    <p th:text="${error}"></p>
-    <p th:text="${path}"></p>
-    <p th:text="${message}"></p>
-    <p th:text="${exception}"></p>
+    <form action="/edit" method="post" onsubmit="return validateForm()">
+        <input type="text" name="id" th:value="${data.id}" style="display: none">
+        <input type="text" id="title" name="title" th:value="${data.title}">
+        <input type="text" id="price" name="price" th:value="${data.price}">
+        <button type="submit">변경</button>
+    </form>
 </body>
 </html>
